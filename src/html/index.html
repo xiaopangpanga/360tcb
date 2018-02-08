@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="swiper.css"/>
+		<link rel="stylesheet" type="text/css" href="index.css"/>
+	</head>
+	<body>
+		<!--城市列表-->
+		<div id="cont">
+			<font>城市列表</font> <button>关闭 &nbspX</button>
+			<div id="city-list">
+				<!--热门-->
+				<ul id="hot">
+					<li>
+						
+					</li>
+				</ul>
+				<!--列表-->
+				<ul id="list">
+					<li>
+						
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--导航栏-->
+		<nav>
+			<!--左城市-->
+			<div id="left">
+				<ul class="ul-first">
+					<li>太原</li>
+					<li class="city"><a class="change-city">[切换城市]</a></li>
+					<li class="hander">同城帮首页</li>
+				</ul>
+			</div>
+			<!--右登录-->
+			<div id="right">
+				<ul class="ul-first">
+					<li><a href="#">登录</a></li>
+					<li><a href="#">注册</a></li>
+					<li><a href="#">我的订单</a></li>
+					<li><a href="#">在线客服(9：00-21：00)</a></li>
+					<li><a href="#">客户服务</a></li>
+					<li><a href="#">论坛</a></li>
+					<li><a href="#" class="suggest">投诉建议</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!--分类标识导航-->
+		<div id="banner">
+			<div id="log">
+				
+			</div>
+			<div id="category">
+				<ul>
+					<li><a href="#">二手优品</a></li>
+					<li><a href="#">手机回收</a></li>
+					<li><a href="#">手机维修</a></li>
+					<li><a href="#">电脑维修</a></li>
+					<li><a href="#">以旧换新</a></li>
+					<li><a href="#">手机租用</a></li>
+				</ul>
+			</div>
+		</div>
+		<!--轮播图大log-->
+		<div id="swiper">
+			
+			<div class="swiper-container">
+			    <!--<div class="swiper-wrapper">
+			        <div class="swiper-slide"><img src="img/t01f33137f9dde655ce.png"/></div>
+			        <div class="swiper-slide"><img src="img/t010277e84ce18b98b6.png"/></div>
+			        <div class="swiper-slide"><img src="img/t01f2fbcfa29801c4b2.jpg"/></div>
+			        <div class="swiper-slide"><img src="img/t019f09cd1c5850e1a7.png"/></div>
+			    </div>-->
+			</div>
+			<div id="list2">
+				<!--<ul>
+					<li><a href="">修手机/pad</a>></li>
+					<li><a href="">修电脑</a>></li>
+					<li><a href="">卖手机/电脑</a>></li>
+					<li><a href="">买二手机</a>></li>
+				</ul>-->
+			</div>
+		</div>
+	</body>
+	<script type="text/html" id="tempHot">
+		<%for(var i=0;i<hotCity.length;i++){%>
+			<li><%=hotCity[i].name%></li>
+		<%}%>
+	</script>
+	<script type="text/html" id="tempList">
+		<%for(var k in obj){%>
+			<li onclick="changeCity('<%=k%')"><%=k%></li>
+			<%}%>
+	</script>
+	<script type="text/html" id="tempCity">
+		<%for(var i=0;i<city.length;i++){%>
+			<li><%=city[i].name%></li>
+		<%}%>
+	</script>
+	<script src="../js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var hotCity;
+	    var cityList
+		$.getJSON("http://localhost:8080/src/data/city.json",function(req,res){
+			console.log(res)
+			var cityObj=res.result;
+			 hotCity=cityObj.hotcity;//数组
+			 cityList=cityObj.citylist;//obj
+			$("#hot").html(baidu.template("tempHot",{hotCity:hotCity}))
+			$("#list").html(baidu.template("tempList",{obj,city:List}))
+			changeCity("A")
+			function changeCity(key){
+				var city =cityList[key];
+				$("#city").html(baidu.template("tempCity",{city:city}))
+			}
+		})
+
+	</script>
+</html>
