@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<!--头部-->
+		<div id="head">
+			<div class="content">
+				<div class="left"> 
+					<div class="citylist">
+						<font class="list">城市列表</font>
+						<button>关闭 ×</button>
+						<div class="user">
+							<div class="top">
+								<div>热门</div>
+								<ul>
+									<li></li>
+								</ul>
+								
+							</div>
+							<div class="bottom">
+								
+								<div>拼音</div>
+								<ul class="z">
+									<li></li>
+								</ul>
+								<ul class="city">
+									<li></li>
+								</ul>
+								
+								
+							</div>
+							
+						</div>
+						
+					</div>
+					<font class="city">北京</font>
+					<font class="qie">[ 切换城市 ] </font>
+					<font  class="qie q">同城帮首页</font>
+				</div>
+				<div class="right">
+					<ul>
+						<li>登录</li>
+						<li>注册</li>
+						<li>我的订单</li>
+						<li>在线客服</li>
+						<li>客服服务</li>
+						<li>论坛</li>
+						<li  class="li_0">投诉建议</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--nav-->
+		
+		<div id="nav">
+			<div class="content">
+				<div class="left">
+					
+				</div>
+				<div class="right">
+					<ul>
+						<li  class="li_1"><a href="http://bang.360.cn/youpin?from=index"  target="_blank">二手优品</a>
+							<img src="img/t01198d7629a60c4940.png"/>
+						</li>
+						<li><a href="http://bang.360.cn/huishou?from=index"  target="_blank">手机回收</a></li>
+						<li><a href="http://bang.360.cn/shangmen/mobile?from=index"  target="_blank">手机维修</a></li>
+						<li><a href="http://bang.360.cn/shangmen/pc?from=index"  target="_blank">电脑维修</a></li>
+						<li><a href="http://bang.360.cn/youpin?page=huanxin&from=index"  target="_blank">以旧换新</a></li>
+						<li><a href="http://bang.360.cn/zu?from=index"  target="_blank">电脑租用</a></li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div id="banner">
+			<div class="content">
+				<div class="swiper-container">
+				    <div class="swiper-wrapper">
+				      <div class="swiper-slide"><img src="img/t010277e84ce18b98b6.png"/></div>
+				      <div class="swiper-slide"><img src="img/t019f09cd1c5850e1a7.png"/></div>
+				      <div class="swiper-slide"><img src="img/t01f2fbcfa29801c4b2.jpg"/></div>
+				      <div class="swiper-slide"><img src="img/t01f33137f9dde655ce.png"/></div>
+				    </div>
+				    <div class="swiper-pagination"></div>
+				</div>
+				<ul>
+					<li  class="li_1"><font>修手机/Pad</font></li>
+					<li  class="li_2"><font>修电脑</font></li>
+					<li  class="li_3"><font>卖手机/电脑</font></li>
+					<li class="li_4"><font>买二手手机</font></li>
+				</ul>
+
+			</div>
+		</div>
+	</body>
+	<script src="js/baiduTemplate.js" type="text/javascript" charset="utf-8"></script><!--百度模板-->
+	<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script><!--JQ-->
+	<script src="js/swiper.js" type="text/javascript" charset="utf-8"></script><!--轮播js-->
+	<script src="js/lunbo.js" type="text/javascript" charset="utf-8"></script><!--轮播-->
+	<script src="js/city.js" type="text/javascript" charset="utf-8"></script><!--城市-->
+	<script type="text/html"  id="hotcity"><!--热门城市-->
+		
+		<%for(var i in  arr){%>
+			<li><a href="#"><%=arr[i].name%></a></li>
+		<%}%>
+	</script>
+	<script type="text/html"   id="list">
+	
+		
+		<%for(var k in  obj){%>
+			<li  onclick="changeCity('<%=k%>')"><%=k%></li>
+		<%}%>
+	</script>
+	<script type="text/html"  id="listCity">
+		
+		<%for(var i in city){%>
+			
+			<li><%=city[i].name%></li>
+		<%}%>
+		
+	</script>
+	
+</html>

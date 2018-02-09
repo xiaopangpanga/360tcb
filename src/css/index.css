@@ -1,0 +1,348 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	font-family: "楷体";
+}
+a{
+	color: black;
+}
+
+/*头部*/
+
+#head {
+	width: 100%;
+	height: 50px;
+	background: #f9f9f9;
+	border-bottom: 1px solid black;
+	display: flex;
+}
+
+#head .content {
+	width: 80%;
+	height: 100%;
+	/*background: yellow;*/
+	margin: auto;
+	display: flex;
+}
+
+
+/*head  左边*/
+
+#head .content .left {
+	flex: 1;
+	display: flex;
+	position: relative;
+}
+/*城市切换*/
+#head .content .left .citylist{
+	display: none;
+	position: absolute;
+	top:38px;
+	left:50px;
+	width: 500px;
+	padding-bottom: 20px;
+	background:#F9F9F9;
+	border: 1px solid darkgray;
+	z-index: 12;
+}
+#head .content .left .citylist button{
+	position: absolute;
+	top: 10px;
+	right: 15px;
+}
+#head .content .left .citylist .list{
+	position: absolute;
+	top: 10px;
+	left: 15px;
+}
+#head .content .left .citylist .user{
+	width: 95%;
+	/*height: 180px;*/
+	background: white;
+	border: 1px solid darkgray;
+	margin: 0 auto;
+	margin-top:40px;
+	padding-bottom: 20px;
+}
+/*热门城市*/
+#head .content .left .citylist .user .top{
+	display: flex;
+	/*height:80px ;*/
+	/*background: yellow;*/
+}
+#head .content .left .citylist .user .top div{
+	margin: 15px 20px 0 20px;
+	color: darkgrey;
+}
+#head .content .left .citylist .user .top ul{
+	/*background: red;*/
+	width:380px;
+}
+#head .content .left .citylist .user .top ul li{
+	float: left;
+	padding: 15px 10px 0 0;
+}
+#head .content .left .citylist .user .top ul li a:hover{
+	text-decoration:underline;
+	color: red;
+}
+/*按拼音查询*/
+#head .content .left .citylist .user .bottom{
+	display: flex;
+	height:100px ;
+	/*background:red;*/
+	position: relative;
+	padding-bottom: 20px;
+}
+#head .content .left .citylist .user .bottom div{
+	width: 32px;
+	color: darkgray;
+	margin: 15px 20px 0 20px;
+}
+#head .content .left .citylist .user .bottom  .z{
+	width: 355px;
+	margin: 11px 0 0 0px;
+}
+#head .content .left .citylist .user .bottom  .z  li{
+	float: left;
+	padding: 5px 4px 3px 4px;
+	cursor: pointer;
+	border-bottom: 1px solid darkgray;
+}
+/*拼音城市*/
+#head .content .left .citylist .user .bottom .city{
+	width: 355px;
+	position: absolute;
+	top:50px;
+	left:70px;
+	/*margin: 50px 0 0 70px;*/
+}
+#head .content .left .citylist .user .bottom .city li{
+	float: left;
+	color: black;
+	padding: 0 3px;
+	line-height: 1.5;
+}
+#head .content .left .citylist .user .bottom li:hover{
+	text-decoration: underline;
+	border: none;
+	color:orange;
+} 
+
+
+#head .content .left font {
+	margin: auto 0;
+}
+
+#head .content .left .city {
+	color: blue;
+	margin-right: 10px;
+}
+
+#head .content .left .qie {
+	font-size: 14px;
+	padding-right: 20px;
+	border-right: 1px solid darkgray;
+}
+
+#head .content .left .qie:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#head .content .left .q {
+	border: none;
+	padding-left: 20px;
+}
+
+
+/*head right*/
+
+#head .content .right {
+	display: flex;
+}
+
+#head .content .right ul {
+	display: flex;
+	justify-contentt: flex-end;
+	font-size: 14px;
+	/*background: yellow;*/
+	margin: auto 0;
+}
+
+#head .content .right ul li {
+	padding: 0 15px;
+	border-right: 1px solid darkgray;
+}
+
+#head .content .right ul .li_0 {
+	border: none;
+	color: red;
+}
+
+#head .content .right ul li:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+
+/*nav*/
+
+#nav {
+	width: 100%;
+	height: 90px;
+}
+
+#nav .content {
+	width: 80%;
+	height: 100%;
+	margin: 0 auto;
+	/*background: yellow;*/
+	display: flex;
+}
+
+
+/*左边*/
+
+#nav .content .left {
+	flex: 1;
+	background: url('https://p.ssl.qhimg.com/t01d625639f4e39d711.png');
+	background-position: left center;
+	background-repeat: no-repeat;
+}
+
+
+/*右边*/
+
+#nav .content .right {
+	display: flex;
+	flex: 1;
+}
+
+#nav .content .right ul {
+	display: flex;
+	/*background: red;*/
+	height: 60px;
+	margin: auto 0;
+}
+
+#nav .content .right ul li {
+	font-size: 18px;
+	padding: 0 20px;
+	line-height: 60px;
+}
+
+#nav .content .right ul li a {
+	color: black;
+}
+
+#nav .content .right ul li:hover {
+	background: darkgrey;
+}
+
+#nav .content .right ul .li_1 {
+	position: relative;
+}
+
+#nav .content .right ul .li_1 img {
+	position: absolute;
+	top: 5px;
+	left: 85px;
+}
+
+
+/*banner*/
+
+#banner {
+	width: 100%;
+	height: 400px;
+	/*background: yellow;*/
+}
+
+#banner .content {
+	width: 80%;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+/*轮播图*/
+#banner .content .swiper-container {
+	width: 100%;
+	height: 100%;
+	/*z-index: 0;*/
+}
+#banner .content img{
+	width: 100%;
+	height: 100%;
+}
+
+#banner .content .swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+/*--------------------手机买卖*/
+#banner  .content ul{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 18%;
+	height: 100%;
+	background:url(https://p.ssl.qhimg.com/t01280de86e9d9dc470.png) rgba(0,0,0,0.6);
+	z-index: 10;
+}
+#banner  .content ul li{
+	position: relative;
+	padding-right: 30px;
+	height: 24.5%;
+	border: 1px solid darkgray;
+	color: white;
+	font-size: 20px;
+}
+#banner  .content ul li font{
+	display: inline-block;
+	margin-left: 80px;
+	margin-top: 40px;
+}
+#banner  .content ul li:hover{
+	cursor: pointer;
+}
+#banner  .content ul .li_1:hover{
+	background:url(https ://p.ssl.qhimg.com/t01280de86e9d9dc470.png) green;	
+		background-position:-1px -1px ;
+}
+#banner  .content ul .li_2:hover{
+	background:url(https://p.ssl.qhimg.com/t01280de86e9d9dc470.png) green;	
+	background-position-x:-1px ;
+	background-position-y:-100.5px ;
+}
+#banner  .content ul .li_3:hover{
+	background:url(https://p.ssl.qhimg.com/t01280de86e9d9dc470.png) green;	
+	background-position-x:-1px ;
+	background-position-y:-201px ;
+}
+#banner  .content ul .li_4:hover{
+	background:url(https://p.ssl.qhimg.com/t01280de86e9d9dc470.png) green;	
+	background-position-x:-1px ;
+	background-position-y:-300.5px ;
+}
+#banner  .content ul li img{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
